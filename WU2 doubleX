@@ -1,0 +1,18 @@
+- (bool) doubleX: (NSString *) str {
+    int k;
+    char firstChar;
+    char secondChar;
+    
+    for (k = 0; k < [str length] - 1; k++) {
+        firstChar = [str characterAtIndex: k];
+        secondChar = [str characterAtIndex: k+1];
+        
+        if (firstChar == 'x' && secondChar == 'x') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    return true;
+}
