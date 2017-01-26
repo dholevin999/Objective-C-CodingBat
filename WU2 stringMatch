@@ -1,0 +1,16 @@
+- (int) stringMatch: (NSString *) a :(NSString *) b {
+    int k;
+    int count;
+    
+    int len = fmin([a length], [b length]);
+    
+    for (k = 0; k < len -1; k++) {
+        NSRange range = NSMakeRange(k, 2);
+        if ([[a substringWithRange: range] isEqualToString: [b substringWithRange: range]]) {
+            count++;
+        }
+    }
+    
+    
+    return count;
+}
