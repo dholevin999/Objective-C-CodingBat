@@ -1,0 +1,11 @@
+- (bool) noTriples: (NSArray *) nums {
+    int k;
+    
+    for (k = 0; k < [nums count] - 2; k++) {
+        if ([nums[k] isEqualToNumber: nums[k+1]] && [nums[k+1] isEqualToNumber: nums[k+2]]) {
+            return false;
+        }
+    }
+    
+    return true;
+}
