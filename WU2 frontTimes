@@ -1,0 +1,19 @@
+- (NSString *) frontTimes: (NSString *) str :(int) n {
+    int k;
+    NSString *subString;
+    NSMutableString *result = [NSMutableString stringWithCapacity:[str length] * n];
+    
+    if ([str length] > 3) {
+        NSRange range = NSMakeRange(0,3);
+        subString = [str substringWithRange: range];
+    } else {
+        subString = str;
+    }
+    
+    for (k = 0; k < n; k++) {
+        [result appendString: subString];
+    }
+    
+    
+    return result;
+}
