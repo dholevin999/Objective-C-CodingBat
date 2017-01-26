@@ -1,0 +1,11 @@
+- (NSString *) stringTimes: (NSString *) str :(int) n {
+    int k;
+    NSMutableString *result = [NSMutableString stringWithCapacity:[str length] * n];
+
+    
+    for (k = 0; k < n; k++) {
+        [result appendString: str];
+    }
+    
+    return result;
+}
