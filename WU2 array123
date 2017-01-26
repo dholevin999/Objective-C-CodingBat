@@ -1,0 +1,11 @@
+- (bool) array123: (NSArray *) nums {
+    int k;
+    
+    for (k = 0; k < [nums count] - 2; k++) {
+        if ([nums[k] isEqualToNumber: @1] && [nums[k+1] isEqualToNumber: @2] && [nums[k+2] isEqualToNumber: @3]) {
+            return true;
+        }
+    }
+    
+    return false;
+}
