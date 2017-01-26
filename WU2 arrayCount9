@@ -1,0 +1,13 @@
+- (int) arrayCount9: (NSArray *) nums {
+    int k;
+    int count = 0;
+    
+    for (k = 0; k < [nums count]; k++) {
+        if ([nums[k] isEqualToNumber: @9]) {
+            count++;
+        }
+    }
+
+    
+    return count;
+}
