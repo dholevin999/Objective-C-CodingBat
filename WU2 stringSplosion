@@ -1,0 +1,11 @@
+- (NSString *) stringSplosion: (NSString *) str {
+    int k;
+    NSMutableString *result = [NSMutableString stringWithCapacity: 2];
+    
+    for (k = 0; k <= [str length]; k++) {
+        NSRange range = NSMakeRange(0,k);
+        [result appendString: [str substringWithRange: range]];
+    }
+    
+    return result;
+}
