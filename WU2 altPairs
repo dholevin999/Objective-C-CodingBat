@@ -1,0 +1,15 @@
+- (NSString *) altPairs: (NSString *) str {
+    int k;
+    NSMutableString *result = [NSMutableString stringWithCapacity: [str length]];
+    
+    for (k = 0; k < [str length]; k++) {
+        [result appendFormat: @"%c", [str characterAtIndex: k]];
+        
+        if (k % 2 == 1) {
+            k += 2;
+        }
+    }
+    
+    return result;
+    
+}
