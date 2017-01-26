@@ -1,0 +1,17 @@
+- (int) countXX: (NSString *) str {
+    int k;
+    int count = 0;
+    NSMutableString *subString = [NSMutableString stringWithCapacity: 2];
+//    NSString *subString; //will work, but take up more memory
+    
+    for (k = 0; k < [str length] - 1; k++) {
+        NSRange range = NSMakeRange(k,2);
+        subString = [str substringWithRange: range];
+        
+        if ([subString isEqualToString: @"xx"]) {
+            count++;
+        }
+    }
+    
+    return count;
+}
