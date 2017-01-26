@@ -1,0 +1,17 @@
+- (NSString *) stringX: (NSString *) str {
+    int k;
+    NSMutableString *result = [NSMutableString stringWithCapacity: [str length]];
+    
+    
+    [result appendFormat: @"%c", [str characterAtIndex: 0]];
+    
+    for (k = 1; k < [str length] - 1; k++) {
+        if ([str characterAtIndex: k] != 'x') {
+            [result appendFormat: @"%c", [str characterAtIndex: k]];
+        }
+    }
+     
+    [result appendFormat: @"%c", [str characterAtIndex: [str length] - 1]];
+    
+     return result;
+}
