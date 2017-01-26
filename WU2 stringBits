@@ -1,0 +1,14 @@
+- (NSString *) stringBits: (NSString *) str {
+    int k;
+    NSMutableString *subString = [NSMutableString stringWithCapacity: [str length] / 2];
+    
+    for (k = 0; k < str.length; k++) {
+        if (k % 2 == 0) {
+            [subString appendFormat: @"%c", [str characterAtIndex: k]];
+        }
+        
+    }
+    
+    return subString;
+    
+}
