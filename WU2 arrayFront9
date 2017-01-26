@@ -1,0 +1,11 @@
+- (bool) arrayFront9: (NSArray *) nums {
+    int k;
+    
+    for (k = 0; k < [nums count]; k++) {
+        if ([nums[k] isEqualToNumber: @9] && k <= 3) {
+            return true;
+        }
+    }
+    
+    return false;
+}
