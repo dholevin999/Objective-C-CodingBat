@@ -1,0 +1,14 @@
+- (NSString *) stringYak: (NSString *) str {
+    int k;
+    NSMutableString *result = [NSMutableString stringWithCapacity: [str length]];
+    
+    for (k = 0; k < [str length] - 2; k++) {
+        if ([str characterAtIndex: k] != 'y' && [str characterAtIndex: k+2 != 'k']) {
+            [result appendFormat: @"%c", [str characterAtIndex: k]];
+        } else {
+            k += 2;
+        }
+    }
+    
+    return result;
+}
