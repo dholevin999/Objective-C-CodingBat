@@ -1,0 +1,12 @@
+- (int) array667: (NSArray *) nums {
+    int k;
+    int count;
+    
+    for (k = 0; k < [nums count] - 1; k++) {
+        if ([nums[k] isEqualToNumber: @6] && ([nums[k+1] isEqualToNumber: @6] || [nums[k+1] isEqualToNumber: @7])) {
+            count++;
+        }
+    }
+    
+    return count;
+}
